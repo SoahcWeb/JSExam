@@ -22,4 +22,4 @@ JSExam est un jeu de mémoire développé en JavaScript avec Vite. Le jeu propos
 
 1. Cloner ce dépôt :  
 ```bash
-git clone https://github.com/tonPseudo/JSExam.git
+git clone https://github.com/SoahcWeb/JSExam.git
