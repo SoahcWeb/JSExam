@@ -1,0 +1,104 @@
+/* Container principal */
+#app {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Grille 4x4 responsive */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Carte avec effet flip */
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* carré */
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  user-select: none;
+  backface-visibility: hidden;
+}
+
+.card .back {
+  transform: rotateY(0deg);
+  background-color: #ccc;
+}
+
+.card .front {
+  transform: rotateY(180deg);
+}
+
+/* Hover sur carte non retournée */
+.card:not(.flipped):hover {
+  filter: brightness(1.1);
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Boutons */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1.2em;
+  background-color: #f38b4a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e67e22;
+}
+
+/* Écran d'accueil */
+.home-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.home-screen .logo {
+  width: 50%;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+/* Écran victoire */
+.victory {
+  margin-top: 50px;
+}
